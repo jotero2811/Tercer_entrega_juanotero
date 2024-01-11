@@ -1,0 +1,14 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %}
+
+<h1> Alta Semillas</h1>
+
+    <form action="" method="POST"> {% csrf_token %}
+
+        {{mi_formu1.as_p}}
+
+        <input type="submit" value="Guardar">
+    </form>
+
+{% endblock %}

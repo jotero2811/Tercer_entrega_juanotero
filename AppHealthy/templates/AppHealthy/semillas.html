@@ -1,0 +1,15 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %} 
+
+<form action="/resultadosemilla/" method="GET"> 
+</form>
+
+{% for x in semillas %}
+
+<h2>
+<p>{{x.nombre}}  {{x.presentacion}}  $ {{x.precio}} </p>
+</h2>
+
+{% endfor %}
+{% endblock %}

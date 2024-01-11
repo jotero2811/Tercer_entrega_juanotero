@@ -1,0 +1,20 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %}
+
+    <h1> Buscar especias</h1> 
+    
+    <form action="/resultadoespecias/" method="GET"> 
+
+        Nombre especia: <input type="text" name="buscaespecia">
+        
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    {% for x in especia %}
+    
+    <p> {{x.nombre}}   {{x.presentacion}}   ${{x.precio}} </p>
+    
+    {% endfor %}
+    {% endblock %}

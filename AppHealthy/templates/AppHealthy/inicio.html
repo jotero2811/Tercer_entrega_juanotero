@@ -1,0 +1,28 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %} HEALTHY LIFE 
+<h3> La nutrición óptima es la medicina del mañana.</h3>
+<h4>Dr. Linus Pauling</h4>
+
+<form action="/resultadofrutos/" method="GET"> 
+
+    <P> </P>
+
+    BUSCAR FRUTO SECO : <input type="text" name="buscafruto">
+    
+    <input type="submit" value="Buscar">
+
+</form>
+
+{% for x in frutos %}
+
+<p>{{x.nombre}}   {{x.presentacion}}   ${{x.precio}}</p>
+
+{% endfor %}
+
+{% endblock %}
+
+
+
+
+

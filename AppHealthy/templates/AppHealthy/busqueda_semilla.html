@@ -1,0 +1,21 @@
+{% extends "AppHealthy/padre.html" %}
+
+{% block titulo %}
+
+    <h1> Buscar semilla </h1> 
+    
+    <form action="/resultadosemilla/" method="GET"> 
+
+        Nombre semilla: <input type="text" name="buscasemilla">
+        
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    {% for x in semilla %}
+
+    <p>{{x.nombre}}   {{x.presentacion}}   ${{x.precio}}</p>
+
+    {% endfor %}
+
+    {% endblock %}
